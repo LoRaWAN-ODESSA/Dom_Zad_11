@@ -48,8 +48,23 @@ public class StringTest {
 
         StringBuilder build2 = new StringBuilder ();
         build2 = build2.append(s1).append(".").append(s2).append(".").append(s3).append(".").append(s4).append(".").append(s5);
-        
+        String[] newString = build2.toString().split("\\.");
+        System.out.println(Arrays.toString(newString));
+        for (int i = 0; i < newString.length; i++) {
+            if(i == 0) {
+                System.out.print(newString[i] + " ");
+            } else if((i % 3) != 0) {
+                System.out.print(newString[i] + " ");
+            } else {
+                System.out.print("\n" + newString[i] + " ");
+            }
+        }
+        System.out.println();
+        for (int i = 0; i < newString.length; i++) {
+            System.out.print(newString[newString.length - i - 1] + " ");
 
-
+        }
+        System.out.println();
+        System.out.println(build2.toString().replace(".", " "));
     }
 }
