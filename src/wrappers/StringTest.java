@@ -62,7 +62,6 @@ public class StringTest {
         System.out.println();
         for (int i = 0; i < newString.length; i++) {
             System.out.print(newString[newString.length - i - 1] + " ");
-
         }
         System.out.println();
         System.out.println(build2.toString().replace(".", " "));
